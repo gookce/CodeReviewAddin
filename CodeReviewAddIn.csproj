@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D7D74125-1C3B-45D6-A7C3-25061F6DE60F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CodeReviewAddin</RootNamespace>
+    <AssemblyName>CodeReviewAddin</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper">
+      <HintPath>..\packages\Dapper.1.50.2\lib\net45\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v11.1.Core, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.Charts.v11.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.CodeParser.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.Data.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.OfficeSkins.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.OfficeSkins.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v11.1.Core, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.PivotGrid.v11.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.Printing.v11.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Reports.v11.1.Designer, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.Reports.v11.1.Designer.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v11.1.Core, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.RichEdit.v11.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.Utils.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.XtraBars.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v11.1.Design, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.XtraBars.v11.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.XtraCharts.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v11.1.Design, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.XtraCharts.v11.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v11.1.UI, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.XtraCharts.v11.1.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.XtraEditors.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v11.1.Design, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.XtraEditors.v11.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.XtraGrid.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v11.1.Design, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.XtraGrid.v11.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.XtraLayout.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v11.1.Design, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.XtraLayout.v11.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.XtraNavBar.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v11.1.Design, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.XtraNavBar.v11.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.XtraPivotGrid.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v11.1.Design, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.XtraPivotGrid.v11.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.XtraPrinting.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v11.1.Design, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.XtraPrinting.v11.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.XtraReports.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.1.Design, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.XtraReports.v11.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v11.1.Extensions, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.XtraReports.v11.1.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.XtraRichEdit.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v11.1.Design, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.XtraRichEdit.v11.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v11.1.Extensions, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.XtraRichEdit.v11.1.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v11.1.Printing, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.XtraRichEdit.v11.1.Printing.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.XtraTreeList.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v11.1.Design, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.XtraTreeList.v11.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.XtraVerticalGrid.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraWizard.v11.1, Version=11.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\DevExpress.XtraWizard.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\packages\EPPlus.4.1.0\lib\net35\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.Cache.Common">
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.Cache.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.Common.Bo, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.Common.Bo.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.Common.Ui">
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.Common.Ui.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.ControlLibrary.Ui">
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.ControlLibrary.Ui.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.DataAccess">
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.ExpressionEvaluator.Bo">
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.ExpressionEvaluator.Bo.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.GtpDataSet, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.GtpDataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.GtpLutzBarManager">
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.GtpLutzBarManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.GtpThreadPool">
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.GtpThreadPool.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.GtpXml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.GtpXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.Interfaces.Bo">
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.Interfaces.Bo.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.Interfaces.Ui, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.Interfaces.Ui.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.Invoker">
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.Invoker.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.Ipc">
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.Ipc.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.Json">
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.LocalInvoker">
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.LocalInvoker.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.Logging.Bo">
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.Logging.Bo.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.Logging.Ui">
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.Logging.Ui.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.Plugin.Aepbo">
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.Plugin.Aepbo.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.Plugin.Bo">
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.Plugin.Bo.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.Plugin.Common">
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.Plugin.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.Plugin.Ui">
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.Plugin.Ui.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.PropertyBag">
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.PropertyBag.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.Repository.Bo">
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.Repository.Bo.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.Repository.Ui">
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.Repository.Ui.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.RequestBroker">
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.RequestBroker.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.Rmi">
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.Rmi.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.ServiceObjects.Ui">
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.ServiceObjects.Ui.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.Version.Bo">
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.Version.Bo.dll</HintPath>
+    </Reference>
+    <Reference Include="Gtp.Framework.Version.Ui">
+      <HintPath>D:\GTPDEV\Deployment\Gtp.Framework.Version.Ui.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeReviewQuestion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CodeReviewQuestion.Designer.cs">
+      <DependentUpon>CodeReviewQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodeReviewAddinForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodeReviewAddinForm.Designer.cs">
+      <DependentUpon>CodeReviewAddinForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connection.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Questions.cs" />
+    <EmbeddedResource Include="CodeReviewAddinForm.resx">
+      <DependentUpon>CodeReviewAddinForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodeReviewQuestion.resx">
+      <DependentUpon>CodeReviewQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <None Include="app.config" />
+    <None Include="CodeReview.xlsx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
